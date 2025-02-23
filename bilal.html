@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateEntry() {
+            var x = document.forms["validation"]["forename"] .value;
+            if (x == null || x =="") {
+
+                alert("you cannot have a blank field. please type in your forename")
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="validation" action="validation_blank_field.asp" onsubmit="return validateEntry()" method="post">
+        Forename: <input type="text" name="forename">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>
+
+<html>
+<head>
+<script>
+function disablecombobox() {
+    document.getElementById("selectFish").disabled = true;
+}
+function enablecombobox() {
+    document.getElementById("selectFish").disabled = false;
+}
+</script>
+</head>
+<body>
+
+<form>
+    <select id="selectFish">
+        <option>Shellfish</option>
+        <option>Monkfish</option>
+        <option>Skate</option>
+        <option>Prawns</option>
+    </select>
+
+    <input type="button" onclick="disablecombobox()" value="Disable list">
+    <input type="button" onclick="enablecombobox()" value="Enable list">
+</form>
+
+</body>
+</html>
+
+
